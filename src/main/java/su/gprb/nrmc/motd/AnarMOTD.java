@@ -57,6 +57,7 @@ public class AnarMOTD extends JavaPlugin implements Listener
 
     private void reloadSettings()
     {
+        reloadConfig();
         FileConfiguration config = getConfig();
         title = config.getString("title.prefix") + config.getString("title.text") + ChatColor.RESET;
         subtitleFile = config.getString("subtitle.file");
