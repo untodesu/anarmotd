@@ -1,0 +1,17 @@
+main: su.gprb.nrmc.motd.AnarMOTD
+name: AnarMOTD
+version: 1.0.0
+description: The simplest MOTD plugin out there
+api-version: 1.19
+load: STARTUP
+author: https://github.com/undnull
+website: https://github.com/undnull/anarmotd
+commands:
+  motd:
+    description: Reload AnarMOTD configuration
+    aliases: [anarmotd, reloadmotd]
+    permission: anarmotd.command
+    usage: /<command>
+permissions:
+  anarmotd.command:
+    default: op
