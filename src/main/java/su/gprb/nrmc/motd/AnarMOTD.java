@@ -49,9 +49,9 @@ public class AnarMOTD extends JavaPlugin implements Listener
     {
         FileConfiguration config = getConfig();
         config.addDefault("title.text", "A Minecraft Server");
-        config.addDefault("title.prefix", ChatColor.WHITE.toString() + ChatColor.BOLD + ChatColor.ITALIC);
+        config.addDefault("title.prefix", ChatColor.GRAY.toString() + ChatColor.BOLD + ChatColor.ITALIC);
         config.addDefault("subtitle.file", "config/motd.txt");
-        config.addDefault("subtitle.prefix", ChatColor.GOLD.toString() + ChatColor.ITALIC);
+        config.addDefault("subtitle.prefix", ChatColor.GOLD.toString());
         config.options().copyDefaults(true);
     }
 
