@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="anarmotd.main:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/anarmotd_main_jar</output-path>
-    <root id="archive" name="anarmotd.main.jar">
-      <element id="module-output" name="anarmotd.main" />
-    </root>
-  </artifact>
-</component>
