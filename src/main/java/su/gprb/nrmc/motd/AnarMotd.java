@@ -53,6 +53,12 @@ public class AnarMotd extends JavaPlugin implements CommandExecutor, Listener
         super.reloadConfig();
 
         FileConfiguration config = getConfig();
+        config.addDefault("motd.file", "config/motd.txt");
+        config.addDefault("motd.format", ChatColor.GOLD.toString());
+        config.addDefault("title.mode", "disabled");
+        config.addDefault("title.text", "A Minecraft Server");
+        config.addDefault("title.format", ChatColor.GRAY.toString() + ChatColor.BOLD + ChatColor.ITALIC);
+        config.options().copyDefaults(true);
 
         try {
             final String mformat = Objects.requireNonNull(config.getString("motd.format"));
@@ -83,19 +89,13 @@ public class AnarMotd extends JavaPlugin implements CommandExecutor, Listener
         }
 
         saveConfig();
+
+        Bukkit.getLogger().info("AnarMOTD reloaded!");
     }
 
     @Override
     public void onEnable()
     {
-        FileConfiguration config = getConfig();
-        config.addDefault("motd.file", "config/motd.txt");
-        config.addDefault("motd.format", ChatColor.GOLD.toString());
-        config.addDefault("title.mode", "disabled");
-        config.addDefault("title.text", "A Minecraft Server");
-        config.addDefault("title.format", ChatColor.GRAY.toString() + ChatColor.BOLD + ChatColor.ITALIC);
-        config.options().copyDefaults(true);
-
         // Register self as a command executor
         Objects.requireNonNull(getCommand("motd")).setExecutor(this);
 
@@ -109,7 +109,6 @@ public class AnarMotd extends JavaPlugin implements CommandExecutor, Listener
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
     {
         reloadConfig();
-        Bukkit.getLogger().info("AnarMOTD reloaded!");
         return true;
     }
 
