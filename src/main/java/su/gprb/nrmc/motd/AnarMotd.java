@@ -64,7 +64,7 @@ public class AnarMotd extends JavaPlugin implements CommandExecutor, Listener
             final String mformat = Objects.requireNonNull(config.getString("motd.format"));
             final String tformat = Objects.requireNonNull(config.getString("title.format"));
             final String title = Objects.requireNonNull(StringUtils.rightPad(config.getString("title.text"), 4));
-            final String tx = (tformat + title.substring(0, 3) + ChatColor.RESET);
+            final String tx = (tformat + title.substring(0, 2) + ChatColor.RESET);
             final String ty = (tformat + title.substring(2, 4) + ChatColor.RESET);
 
             motds = Files.readAllLines(Paths.get(Objects.requireNonNull(config.getString("motd.file"))));
