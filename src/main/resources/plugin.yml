@@ -1,6 +1,6 @@
-main: su.gprb.nrmc.anarmotd.AnarMotd
+main: su.untode.nrmc.anarmotd.AnarMotd
 name: AnarMotd
-version: 1.2.0
+version: 1.2.1
 description: The simplest MOTD plugin out there
 api-version: 1.19
 load: STARTUP

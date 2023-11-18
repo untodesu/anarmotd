@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group = 'su.gprb.nrmc'
-version = '1.2.0'
+group = 'su.untode.nrmc'
+version = '1.2.1'
 
 repositories {
     mavenCentral()

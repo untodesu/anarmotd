@@ -1,4 +1,4 @@
-package su.gprb.nrmc.anarmotd;
+package su.untode.nrmc.anarmotd;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
@@ -33,22 +33,22 @@ public final class AnarMotd extends JavaPlugin implements Listener
     private NamedTextColor getColor(@NotNull String value)
     {
         return switch(value.toLowerCase()) {
-            case "black" -> NamedTextColor.BLACK;
-            case "dark_blue" -> NamedTextColor.DARK_BLUE;
-            case "dark_green" -> NamedTextColor.DARK_GREEN;
-            case "dark_aqua" -> NamedTextColor.DARK_AQUA;
-            case "dark_red" -> NamedTextColor.DARK_RED;
-            case "dark_purple" -> NamedTextColor.DARK_PURPLE;
-            case "gold" -> NamedTextColor.GOLD;
-            case "dark_gray" -> NamedTextColor.DARK_GRAY;
-            case "blue" -> NamedTextColor.BLUE;
-            case "green" -> NamedTextColor.GREEN;
-            case "aqua" -> NamedTextColor.AQUA;
-            case "red" -> NamedTextColor.RED;
+            case "black"        -> NamedTextColor.BLACK;
+            case "dark_blue"    -> NamedTextColor.DARK_BLUE;
+            case "dark_green"   -> NamedTextColor.DARK_GREEN;
+            case "dark_aqua"    -> NamedTextColor.DARK_AQUA;
+            case "dark_red"     -> NamedTextColor.DARK_RED;
+            case "dark_purple"  -> NamedTextColor.DARK_PURPLE;
+            case "gold"         -> NamedTextColor.GOLD;
+            case "dark_gray"    -> NamedTextColor.DARK_GRAY;
+            case "blue"         -> NamedTextColor.BLUE;
+            case "green"        -> NamedTextColor.GREEN;
+            case "aqua"         -> NamedTextColor.AQUA;
+            case "red"          -> NamedTextColor.RED;
             case "light_purple" -> NamedTextColor.LIGHT_PURPLE;
-            case "yellow" -> NamedTextColor.YELLOW;
-            case "white" -> NamedTextColor.WHITE;
-            default -> NamedTextColor.GRAY;
+            case "yellow"       -> NamedTextColor.YELLOW;
+            case "white"        -> NamedTextColor.WHITE;
+            default             -> NamedTextColor.GRAY;
         };
     }
 
@@ -60,11 +60,11 @@ public final class AnarMotd extends JavaPlugin implements Listener
 
             for(String item : items) {
                 switch (item) {
-                    case "bold" -> decorations.add(TextDecoration.BOLD);
-                    case "italic" -> decorations.add(TextDecoration.ITALIC);
-                    case "underline" -> decorations.add(TextDecoration.UNDERLINED);
-                    case "strikethrough" -> decorations.add(TextDecoration.STRIKETHROUGH);
-                    case "obfuscated" -> decorations.add(TextDecoration.OBFUSCATED);
+                    case "bold"             -> decorations.add(TextDecoration.BOLD);
+                    case "italic"           -> decorations.add(TextDecoration.ITALIC);
+                    case "underline"        -> decorations.add(TextDecoration.UNDERLINED);
+                    case "strikethrough"    -> decorations.add(TextDecoration.STRIKETHROUGH);
+                    case "obfuscated"       -> decorations.add(TextDecoration.OBFUSCATED);
                 }
             }
 
